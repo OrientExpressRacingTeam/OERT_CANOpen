@@ -1,0 +1,813 @@
+[FileInfo]
+CreatedBy=Genna Marco
+ModifiedBy=Genna Marco
+Description=Blink Marine PKP2400SI
+CreationTime=11:34AM
+CreationDate=09-01-2023
+ModificationTime=11:34AM
+ModificationDate=09-01-2023
+FileName=211018_PKP2400SI_CANeds_V4.eds
+FileVersion=4
+FileRevision=1
+EDSVersion=4.1
+
+[DeviceInfo]
+VendorName=BlinkMarine
+VendorNumber=0x000003E2
+ProductName=PKP2400SI
+RevisionNumber=00
+BaudRate_10=0
+BaudRate_20=1
+BaudRate_50=1
+BaudRate_125=1
+BaudRate_250=1
+BaudRate_500=1
+BaudRate_800=0
+BaudRate_1000=1
+SimpleBootUpMaster=0
+SimpleBootUpSlave=1
+Granularity=0
+DynamicChannelsSupported=0
+CompactPDO=19
+GroupMessaging=0
+NrOfRXPDO=4
+NrOfTXPDO=1
+LSS_Supported=0
+
+[DummyUsage]
+Dummy0001=0
+Dummy0002=0
+Dummy0003=0
+Dummy0004=0
+Dummy0005=0
+Dummy0006=0
+Dummy0007=0
+
+[Comments]
+Lines=0
+
+[MandatoryObjects]
+SupportedObjects=3
+1=0x1000
+2=0x1001
+3=0x1018
+
+[1000]
+ParameterName=Device Type
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x000B0191
+PDOMapping=0
+LowLimit=0x00030191
+HighLimit=0x00030191
+
+[1001]
+ParameterName=Error Register
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0
+PDOMapping=0
+LowLimit=0
+HighLimit=10
+
+[1018]
+ParameterName=Identity Object
+ObjectType=0x9
+SubNumber=3
+
+[1018sub0]
+ParameterName=Number of entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=4
+PDOMapping=0
+LowLimit=1
+HighLimit=4
+
+[1018sub1]
+ParameterName=Vendor Id
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x000003E2
+PDOMapping=0
+
+[1018sub4]
+ParameterName=Serial number
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0xFFFFFFFF
+PDOMapping=0
+
+[OptionalObjects]
+SupportedObjects=17
+1=0x1008
+2=0x1009
+3=0x100A
+4=0x100B
+5=0x1011
+6=0x1016
+7=0x1017
+8=0x1400
+9=0x1401
+10=0x1402
+11=0x1403
+12=0x1600
+13=0x1601
+14=0x1602
+15=0x1603
+16=0x1800
+17=0x1A00
+
+[1008]
+ParameterName=Manufacturer Device Name
+ObjectType=0x7
+DataType=0x0009
+AccessType=const
+DefaultValue=BlinkMarine
+PDOMapping=0
+
+[1009]
+ParameterName=Manufacturer Hardware Version
+ObjectType=0x7
+DataType=0x0009
+AccessType=const
+DefaultValue=V_01
+PDOMapping=0
+
+[100A]
+ParameterName=Manufacturer Software Version
+ObjectType=0x7
+DataType=0x0009
+AccessType=const
+DefaultValue=1.3
+PDOMapping=0
+
+[100B]
+ParameterName=Model ID
+ObjectType=0x7
+DataType=0x0009
+AccessType=const
+DefaultValue=PKP2400SI
+PDOMapping=0
+
+[1011]
+ParameterName=Restore Default Parameters
+ObjectType=0x8
+SubNumber=2
+
+[1011sub0]
+ParameterName=Number of entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=1
+PDOMapping=0
+
+[1011sub1]
+ParameterName=Restore all Default Parameters
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x01
+PDOMapping=0
+
+[1016]
+ParameterName=Consumer Heartbeat Time
+ObjectType=0x8
+SubNumber=2
+
+[1016sub0]
+ParameterName=Highest sub-index supported
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0x01
+PDOMapping=0
+
+[1016sub1]
+ParameterName=Consumer Heartbeat Time
+ObjectType=0x7
+DataType=0x0007
+AccessType=rw
+DefaultValue=0x00000000
+PDOMapping=0
+LowLimit=0x00010000
+HighLimit=0x007FFFFF
+
+[1017]
+ParameterName=Producer Heartbeat Time
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0x0000
+PDOMapping=0
+LowLimit=0x0000
+HighLimit=0xFEFF
+
+[1400]
+ParameterName=Receive PDO Communication Parameter 0
+ObjectType=0x9
+SubNumber=3
+
+[1400sub0]
+ParameterName=Number of entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+PDOMapping=0
+LowLimit=0x02
+HighLimit=0x02
+
+[1400sub1]
+ParameterName=COB ID
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=$NODEID+0x00000200
+PDOMapping=0
+LowLimit=0x00000201
+HighLimit=0x00000280
+
+[1400sub2]
+ParameterName=Transmission Type
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=0xFE
+PDOMapping=0
+LowLimit=0x00
+HighLimit=0xFE
+
+[1401]
+ParameterName=Receive PDO Communication Parameter 1
+ObjectType=0x9
+SubNumber=3
+
+[1401sub0]
+ParameterName=Number of entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+PDOMapping=0
+LowLimit=0x02
+HighLimit=0x02
+ObjFlags=0x0
+
+[1401sub1]
+ParameterName=COB ID
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=$NODEID+0x00000300
+PDOMapping=0
+LowLimit=0x00000301
+HighLimit=0x00000380
+
+[1401sub2]
+ParameterName=Transmission Type
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=0xFE
+PDOMapping=0
+LowLimit=0x00
+HighLimit=0xFE
+
+[1402]
+ParameterName=Receive PDO Communication Parameter 2
+ObjectType=0x9
+SubNumber=3
+
+[1402sub0]
+ParameterName=Number of entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+PDOMapping=0
+LowLimit=0x02
+HighLimit=0x02
+
+[1402sub1]
+ParameterName=COB ID
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=$NODEID+0x00000400
+PDOMapping=0
+LowLimit=0x00000401
+HighLimit=0x00000480
+
+[1402sub2]
+ParameterName=Transmission Type
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0xFE
+PDOMapping=0
+
+[1403]
+ParameterName=Receive PDO Communication Parameter 3
+ObjectType=0x9
+SubNumber=3
+
+[1403sub0]
+ParameterName=Number of entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+PDOMapping=0
+LowLimit=0x02
+HighLimit=0x02
+
+[1403sub1]
+ParameterName=COB ID
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=$NODEID+0x00000500
+PDOMapping=0
+LowLimit=0x00000501
+HighLimit=0x00000580
+
+[1403sub2]
+ParameterName=Transmission Type
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0xFE
+PDOMapping=0
+
+[1600]
+ParameterName=Receive PDO Mapping Parameter 0
+ObjectType=0x9
+SubNumber=4
+
+[1600sub0]
+ParameterName=Number of entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=const
+DefaultValue=3
+PDOMapping=0
+LowLimit=0
+HighLimit=3
+
+[1600sub1]
+ParameterName=LED States Command RED
+ObjectType=0x7
+DataType=0x0007
+AccessType=const
+DefaultValue=0x20010108
+PDOMapping=0
+
+[1600sub2]
+ParameterName=LED States Command GREEN
+ObjectType=0x7
+DataType=0x0007
+AccessType=const
+DefaultValue=0x20010208
+PDOMapping=0
+
+[1600sub3]
+ParameterName=LED States Command BLUE
+ObjectType=0x7
+DataType=0x0007
+AccessType=const
+DefaultValue=0x20010308
+PDOMapping=0
+
+[1601]
+ParameterName=Receive PDO Mapping Parameter 1
+ObjectType=0x9
+SubNumber=4
+
+[1601sub0]
+ParameterName=Number of entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=const
+DefaultValue=3
+PDOMapping=0
+LowLimit=0
+HighLimit=3
+
+[1601sub1]
+ParameterName=LED Blinking States RED
+ObjectType=0x7
+DataType=0x0007
+AccessType=const
+DefaultValue=0x20020108
+PDOMapping=0
+
+[1601sub2]
+ParameterName=LED Blinking States GREEN
+ObjectType=0x7
+DataType=0x0007
+AccessType=const
+DefaultValue=0x20020208
+PDOMapping=0
+
+[1601sub3]
+ParameterName=LED Blinking States BLUE
+ObjectType=0x7
+DataType=0x0007
+AccessType=const
+DefaultValue=0x20020308
+PDOMapping=0
+
+[1602]
+ParameterName=Receive PDO Mapping Parameter 2
+ObjectType=0x9
+SubNumber=2
+
+[1602sub0]
+ParameterName=Number of entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=const
+DefaultValue=1
+PDOMapping=0
+LowLimit=0
+HighLimit=1
+
+[1602sub1]
+ParameterName=LED Brightness
+ObjectType=0x7
+DataType=0x0007
+AccessType=const
+DefaultValue=0x20030108
+PDOMapping=0
+
+[1603]
+ParameterName=Receive PDO Mapping Parameter 3
+ObjectType=0x9
+SubNumber=3
+
+[1603sub0]
+ParameterName=Number of entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=const
+DefaultValue=2
+PDOMapping=0
+LowLimit=0
+HighLimit=2
+
+[1603sub1]
+ParameterName=BACKLIGHT Brightness
+ObjectType=0x7
+DataType=0x0007
+AccessType=const
+DefaultValue=0x20030208
+PDOMapping=0
+
+[1603sub2]
+ParameterName=BACKLIGHT Color
+ObjectType=0x7
+DataType=0x0007
+AccessType=const
+DefaultValue=0x20030308
+PDOMapping=0
+
+[1800]
+ParameterName=Transmit PDO Communication Parameter 0
+ObjectType=0x9
+SubNumber=4
+
+[1800sub0]
+ParameterName=Number of entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=5
+PDOMapping=0
+LowLimit=0x02
+HighLimit=0x05
+
+[1800sub1]
+ParameterName=COB ID
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=$NODEID+0x00000180
+PDOMapping=0
+LowLimit=0x00000181
+HighLimit=0x00000200
+
+[1800sub2]
+ParameterName=Transmission Type
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=0xFE
+PDOMapping=0
+LowLimit=0x01
+HighLimit=0xFE
+
+[1800sub5]
+ParameterName=Event Timer
+ObjectType=0x7
+DataType=0x0006
+AccessType=rw
+DefaultValue=0x0000
+PDOMapping=0
+LowLimit=0x0000
+HighLimit=0xFEFF
+
+[1A00]
+ParameterName=Transmit PDO Mapping Parameter 0
+ObjectType=0x9
+SubNumber=2
+
+[1A00sub0]
+ParameterName=Number of entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=const
+DefaultValue=1
+PDOMapping=0
+LowLimit=0
+HighLimit=1
+
+[1A00sub1]
+ParameterName=Key States
+ObjectType=0x7
+DataType=0x0007
+AccessType=const
+DefaultValue=0x20000108
+PDOMapping=0
+
+[ManufacturerObjects]
+SupportedObjects=11
+1=0x2000
+2=0x2001
+3=0x2002
+4=0x2003
+5=0x2010
+6=0x2011
+7=0x2012
+8=0x2013
+9=0x2014
+10=0x2100
+11=0x2200
+
+[2000]
+ParameterName=Key State
+ObjectType=0x9
+SubNumber=2
+
+[2000sub0]
+ParameterName=NrOfObjects
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=1
+PDOMapping=0
+
+[2000sub1]
+ParameterName=Key State
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=0x00
+PDOMapping=1
+LowLimit=0x00
+HighLimit=0xFF
+
+[2001]
+ParameterName=Led State
+ObjectType=0x9
+SubNumber=4
+
+[2001sub0]
+ParameterName=NrOfObjects
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=3
+PDOMapping=0
+
+[2001sub1]
+ParameterName=Led State Red
+ObjectType=0x7
+DataType=0x0005
+AccessType=rww
+DefaultValue=0x00
+PDOMapping=1
+LowLimit=0x00
+HighLimit=0xFF
+
+[2001sub2]
+ParameterName=Led State Green
+ObjectType=0x7
+DataType=0x0005
+AccessType=rww
+DefaultValue=0x00
+PDOMapping=1
+LowLimit=0x00
+HighLimit=0xFF
+
+[2001sub3]
+ParameterName=Led State Blue
+ObjectType=0x7
+DataType=0x0005
+AccessType=rww
+DefaultValue=0x00
+PDOMapping=1
+LowLimit=0x00
+HighLimit=0xFF
+
+[2002]
+ParameterName=Led Blink State
+ObjectType=0x9
+SubNumber=4
+
+[2002sub0]
+ParameterName=NrOfObjects
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=3
+PDOMapping=0
+
+[2002sub1]
+ParameterName=Led Blink State Red
+ObjectType=0x7
+DataType=0x0005
+AccessType=rww
+DefaultValue=0x00
+PDOMapping=1
+LowLimit=0x00
+HighLimit=0xFF
+
+[2002sub2]
+ParameterName=Led Blink State Green
+ObjectType=0x7
+DataType=0x0005
+AccessType=rww
+DefaultValue=0x00
+PDOMapping=1
+LowLimit=0x00
+HighLimit=0xFF
+
+[2002sub3]
+ParameterName=Led Blink State Blue
+ObjectType=0x7
+DataType=0x0005
+AccessType=rww
+DefaultValue=0x00
+PDOMapping=1
+LowLimit=0x00
+HighLimit=0xFF
+
+[2003]
+ParameterName=BRIGHTNESS information
+ObjectType=0x9
+SubNumber=7
+
+[2003sub0]
+ParameterName=Number of entries
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=6
+PDOMapping=0
+LowLimit=0x00
+HighLimit=0x06
+
+[2003sub1]
+ParameterName=LED Brightness
+ObjectType=0x7
+DataType=0x0005
+AccessType=rww
+DefaultValue=0x3F
+PDOMapping=1
+LowLimit=0x00
+HighLimit=0x3F
+
+[2003sub2]
+ParameterName=BACKLIGHT Brightness
+ObjectType=0x7
+DataType=0x0005
+AccessType=rww
+DefaultValue=0x00
+PDOMapping=1
+LowLimit=0x00
+HighLimit=0x3F
+
+[2003sub3]
+ParameterName=BACKLIGHT Color
+ObjectType=0x7
+DataType=0x0005
+AccessType=rww
+DefaultValue=0x08
+PDOMapping=1
+LowLimit=0x01
+HighLimit=0x09
+
+[2003sub4]
+ParameterName=DEFAULT Backlight color
+ObjectType=0x7
+DataType=0x0005
+AccessType=rww
+DefaultValue=0x08
+PDOMapping=0
+LowLimit=0x01
+HighLimit=0x09
+
+[2003sub5]
+ParameterName=STARTUP LED Brightness
+ObjectType=0x7
+DataType=0x0005
+AccessType=rww
+DefaultValue=0x3F
+PDOMapping=0
+LowLimit=0x00
+HighLimit=0x3F
+
+[2003sub6]
+ParameterName=STARTUP BACKLIGHT Brightness
+ObjectType=0x7
+DataType=0x0005
+AccessType=rww
+DefaultValue=0x00
+PDOMapping=0
+LowLimit=0x00
+HighLimit=0x3F
+
+[2010]
+ParameterName=Baudrate Setting
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=0x04
+PDOMapping=0
+LowLimit=0x00
+HighLimit=0x07
+
+[2011]
+ParameterName=Bootup Message Setting
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=0x01
+PDOMapping=0
+LowLimit=0x00
+HighLimit=0x01
+
+[2012]
+ParameterName=Start Mode Setting
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=0x00
+PDOMapping=0
+LowLimit=0x00
+HighLimit=0x01
+
+[2013]
+ParameterName=CAN Address Setting
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=0x15
+PDOMapping=0
+LowLimit=0x01
+HighLimit=0x7F
+
+[2014]
+ParameterName=Start LED Sequence Setting
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=0x01
+PDOMapping=0
+LowLimit=0x00
+HighLimit=0x02
+
+[2100]
+ParameterName=Demo Mode Setting
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=0x00
+PDOMapping=0
+LowLimit=0x00
+HighLimit=0x01
+
+[2200]
+ParameterName=Serial number ASCII
+ObjectType=0x7
+DataType=0x0009
+AccessType=ro
+DefaultValue=0xFFFFFFFF
+PDOMapping=0
